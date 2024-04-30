@@ -1,0 +1,80 @@
+:root{
+  font-family: sans-serif;
+}
+
+#main-div{
+  width: 30%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.1px solid #000;
+  border-radius: 10px;
+  padding: 15px;
+}
+
+#input-div{
+  margin: 2% 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#input-div input{
+  padding: 10px;
+  width: 50%;
+  font-size: 1em;
+}
+
+#input-div button{
+  margin-left: 10px;
+  font-size: 1em;
+  width: 30px;
+  cursor: pointer;
+}
+
+#list-div, #completed-list-div{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.list-item{
+  margin: 10px;
+  font-size: large;
+  width: 60%;
+  display: flex;
+}
+
+.list-item label{
+  margin-left: 10px;
+}
+
+#task-count{
+  font-size: 12px;
+  width: 60%;
+}
+
+#completed-div{
+  width: 60%;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.list-item-par{
+  display: flex;
+  justify-content: space-between;
+  width: 65%;
+  align-items: center;
+}
+
+.list-item-par button{
+  height: 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: none;
+}
