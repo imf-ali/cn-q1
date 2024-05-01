@@ -33,13 +33,22 @@ function renderTodoList() {
       ${completedListString}
       <div id="task-count">${completedTaskCount} task completed</div>
     `;
+  } else {
+    completedDiv.innerHTML = `
+      <div id="completed-div">Completed</div>
+      <div id="task-count">0 task completed</div>
+    `;
   }
 
   const listItems = pendingDiv.querySelectorAll('input');
+  const listItemsLabel = pendingDiv.querySelectorAll('label');
   const listItemsPar = pendingDiv.querySelectorAll('.list-item-par');
   listItems.forEach((item, index) => {
     item.addEventListener('click', (e) => {
-      todoListItem[index].completed = !todoListItem[index].completed;
+      const ind = todoListItem.findIndex(data => data.text === listItemsLabel[index].innerText);
+      if(ind !== -1){
+        todoListItem[ind].completed = !todoListItem[ind].completed;
+      }
       renderTodoList()
     })
   })
